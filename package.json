@@ -12,5 +12,8 @@
         "jamie thompson",
         "jamie",
         "thompson"
-    ]
+    ],
+    "license": "No License",
+    "main": "index.js",
+    "repository": "thommadison/jamie"
 }
