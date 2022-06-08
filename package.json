@@ -1,8 +1,10 @@
-
 {
-    "name": "jamie",
+    "name": "jamiett",
     "version": "1.0.0",
     "bin": {
-        "jamie" : "index.js"
+        "jamie": "index.js"
+    },
+    "dependencies": {
+        "clear-any-console": "^1.16.2"
     }
 }
