@@ -3,6 +3,8 @@
 
 const pkgJSON = require('./package.json');
 const welcome = require('cli-welcome');
+const chalk = require('chalk');
+
 
 welcome({
     title: pkgJSON.name,
@@ -22,4 +24,10 @@ welcome({
 // `);
 
 
-console.log('Jamie Thompson https://github.com/thommadison');
+// console.log('Jamie Thompson https://github.com/thommadison');
+console.log(chalk.dim('Jamie Thompson ') + chalk.magenta('https://github.com/thommadison'));
+
+const error = chalk.bold.red;
+const warning = chalk.hex('#FFA500');
+
+console.log(error('Error'));
