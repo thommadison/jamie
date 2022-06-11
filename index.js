@@ -1,10 +1,23 @@
 #!/usr/bin/env node   
 //above code only works on mac
 
+import logSymbols from 'log-symbols';
+
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+
 const pkgJSON = require('./package.json');
+
 const welcome = require('cli-welcome');
+
 const chalk = require('chalk');
 
+
+//Alerts
+const success = chalk.green.inverse;
+const warning = chalk.keyword('orange').inverse;
+const info = chalk.blue.inverse;
+const error = chalk.red.inverse;
 
 welcome({
     title: pkgJSON.name,
@@ -27,7 +40,14 @@ welcome({
 // console.log('Jamie Thompson https://github.com/thommadison');
 console.log(chalk.dim('Jamie Thompson ') + chalk.magenta('https://github.com/thommadison'));
 
-const error = chalk.bold.red;
-const warning = chalk.hex('#FFA500');
 
-console.log(error('Error'));
+console.log(`
+${logSymbols.success} ${success(' SUCCESS ')}: Thanks for checking out my CLI.
+
+${logSymbols.info} ${info(' INFO ')}: I am making a CLI.
+
+${logSymbols.warning} ${warning(' WARNING ')}: PLease don't copy me.
+
+${logSymbols.error} ${error(' ERROR ')}: I am on vacation. Contact me next week.
+`);
+

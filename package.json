@@ -2,12 +2,14 @@
     "name": "jamiett",
     "version": "2.1.0",
     "description": "Get to know Jamie via 'npx jamiett' ",
+    "type" : "module",
     "bin": {
         "jamie": "index.js"
     },
     "dependencies": {
         "chalk": "^4.1.2",
-        "cli-welcome": "^2.2.2"
+        "cli-welcome": "^2.2.2",
+        "log-symbols": "^5.1.0"
     },
     "keywords": [
         "jamie thompson",
